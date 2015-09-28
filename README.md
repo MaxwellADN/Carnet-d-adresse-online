@@ -13,11 +13,13 @@ les password sont cryptés dans la base de donées...
 utilisez
 
 login: admintest
+===
 passwd : passwordadmin
 
 ou
 
 login: test4
+===
 passwd: pass4
 
 pour se connecter ou s'enregistrer ou obtenir des identifiant....
