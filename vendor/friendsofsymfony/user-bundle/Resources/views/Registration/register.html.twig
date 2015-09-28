@@ -1,0 +1,14 @@
+{% extends "AppartooCarnetBundle::index.html.twig" %}
+
+{% block css %}
+	{{ parent() }}
+	
+{% endblock %}
+
+{% block title %}
+	S'inscrire
+{% endblock %}
+
+{% block Membre %}
+{% include "FOSUserBundle:Registration:register_content.html.twig" %}
+{% endblock%}

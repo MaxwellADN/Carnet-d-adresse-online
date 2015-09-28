@@ -1,0 +1,16 @@
+{% extends "AppartooCarnetBundle::index.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+
+{% block Membre %}
+	
+	<h1><small>Êtes-vous sûr de vouloir supprimer ce contact de votre liste? </small>
+	 <form action="{{ path('appartoo_carnet_del', {'id': membre.id}) }}" method="post">
+		<input type="submit" value="Supprimer" class="btn btn-danger" />
+		{{ form_rest(form) }}
+	</form>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "AppartooCarnetBundle::index.html.twig" %}
+
+{% block title %}
+  Accueil - {{ parent() }}
+{% endblock %}
+
+
+{% block Membre %}
+
+	
+    <h3>Liste des Membre</h3>
+	
+	<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Nom </th>
+            <th>Prenom</th>
+			<th>Email</th>
+            <th>Adresses</th>
+			<th>Téléphone</th>
+			<th>Site Web</th>
+			
+        </tr>
+    </thead>
+	<tbody>
+	
+	{% for membre in listmembre %}
+	
+		<tr id="tr_id_1" class="tr-class-1" >
+			<td>{{membre.nom}}</td>
+			<td>{{membre.prenom}}</td>
+			<td>{{membre.email}}</td>
+			<td>{{membre.adresse}}</td>
+			<td>{{membre.tel}}</td>
+			<td>{{membre.siteweb}}</td>
+			<td><a href="{{ path('appartoo_carnet_edit', {'id': membre.id}) }}" class="btn btn-warning">
+			<i class="icon-trash"></i>
+			Modifier</a></td>
+			<td><a href="{{ path('appartoo_carnet_del', {'id': membre.id}) }}" class="btn btn-danger">
+			<i class="icon-trash"></i>
+			Supprimer</a></td>
+			
+		</tr>
+	{%  endfor %}
+	
+	</tbody>
+	</table>
+  
+
+	
+
+{% endblock %}

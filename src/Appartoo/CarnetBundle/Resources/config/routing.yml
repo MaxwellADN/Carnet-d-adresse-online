@@ -1,0 +1,20 @@
+appartoo_carnet_homepage:
+    path:     / 
+    defaults: { _controller: AppartooCarnetBundle:Default:index }
+
+appartoo_carnet_add:
+    path:     /add
+    defaults: { _controller: AppartooCarnetBundle:Default:add }
+
+appartoo_carnet_del:
+    path:     /delete/{id}
+    defaults: { _controller: AppartooCarnetBundle:Default:del }
+    requirements: 
+        id:  \d+
+
+appartoo_carnet_edit:
+    path:     /edit/{id}
+    defaults: { _controller: AppartooCarnetBundle:Default:edit }
+    requirements: 
+        id:  \d+
+
